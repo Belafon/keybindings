@@ -136,8 +136,6 @@
     "command": "workbench.action.togglePanel"
   },
   {
-  },
-  {
     "key": "ctrl+u",
     "command": "-cursorUndo",
     "when": "textInputFocus"
@@ -150,24 +148,6 @@
     "args": {
       "to": "left",
       "by": "character",
-      "value": 1
-    },
-    "when": "textInputFocus"
-  },
-  {
-    // Move cursor down by one line
-    "args": {
-      "to": "down",
-      "by": "line",
-      "value": 1
-    },
-    "when": "textInputFocus"
-  },
-  {
-    // Move cursor up by one line
-    "args": {
-      "to": "ctrl+k",
-      "by": "line",
       "value": 1
     },
     "when": "textInputFocus"
@@ -211,7 +191,7 @@
     "key": "ctrl+,",
     "command": "cursorMove",
     "args": {
-      "to": "ctrl+k",
+      "to": "up",
       "by": "line",
       "value": 3
     },
@@ -274,7 +254,7 @@
     "key": "ctrl+shift+k",
     "command": "cursorMove",
     "args": {
-        "to": "ctrl+k",
+        "to": "up",
         "by": "line",
         "value": 1
     },
@@ -296,7 +276,7 @@
     "key": "ctrl+shift+,",
     "command": "cursorMove",
     "args": {
-        "to": "ctrl+k",
+        "to": "up",
         "by": "line",
         "value": 4
     },
@@ -679,7 +659,7 @@
                                      "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && !vim.active && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
 
 { "key": "ctrl+r",                 "command": "acceptSelectedCodeAction",
-                                     "when": "codeActionMenuVisible" },
+                                     "when": "codeActionMenuVisible" }
 
 
 ]
