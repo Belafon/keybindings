@@ -309,11 +309,6 @@
     "command": "editor.foldAll",
     "when": "editorTextFocus && foldingEnabled"
 },
-{
-    "key": "ctrl+k ctrl+0",
-    "command": "-editor.foldAll",
-    "when": "editorTextFocus && foldingEnabled"
-},
 
 
 
@@ -659,8 +654,214 @@
                                      "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && !vim.active && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
 
 { "key": "ctrl+r",                 "command": "acceptSelectedCodeAction",
-                                     "when": "codeActionMenuVisible" }
+                                     "when": "codeActionMenuVisible" },
+
+
+
+
+
+
+
+
+
+
+
+
+                                
+                                     
+
+{ "key": "ctrl+'", "command": "type", 
+                                    "args": { "text": "\n" }, "when": "editorTextFocus" },
+{ "key": "ctrl+'",                 "command": "interactiveEditor.accept",
+"when": "interactiveEditorFocused && interactiveEditorHasProvider && interactiveEditorVisible && !interactiveEditorEmpty" },
+
+{ "key": "ctrl+'",                 "command": "breakpointWidget.action.acceptInput",
+                                     "when": "breakpointWidgetVisible && inBreakpointWidget" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.extensioneditor.findNext",
+                                     "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'workbench.editor.extension'" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.goToFocusedStickyScrollLine",
+                                     "when": "stickyScrollFocused" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.insertColorWithStandaloneColorPicker",
+                                     "when": "standaloneColorPickerFocused" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.nextMatchFindAction",
+                                     "when": "editorFocus && findInputFocussed" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.webvieweditor.findNext",
+                                     "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'WebviewEditor'" },
+
+{ "key": "ctrl+'",                 "command": "interactiveSession.action.acceptInput",
+                                     "when": "inInteractiveInput && textInputFocus" },
+
+{ "key": "ctrl+'",                 "command": "repl.action.acceptInput",
+                                     "when": "inDebugRepl && textInputFocus" },
+
+{ "key": "ctrl+'",                 "command": "editor.action.replaceOne",
+                                     "when": "editorFocus && findWidgetVisible && replaceInputFocussed" },
+
+{ "key": "ctrl+'",                 "command": "acceptSelectedSuggestion",
+                                     "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus" },
+
+{ "key": "ctrl+'",                 "command": "acceptRenameInput",
+                                     "when": "editorFocus && renameInputVisible && !isComposing" },
+
+{ "key": "ctrl+'",                 "command": "breadcrumbs.selectFocused",
+                                     "when": "breadcrumbsActive && breadcrumbsVisible" },
+
+{ "key": "ctrl+'",                 "command": "keybindings.editor.acceptWhenExpression",
+                                     "when": "inKeybindings && whenFocus && !suggestWidgetVisible" },
+
+{ "key": "ctrl+'",                 "command": "keybindings.editor.defineKeybinding",
+                                     "when": "inKeybindings && keybindingFocus && !whenFocus" },
+
+{ "key": "ctrl+'",                 "command": "list.select",
+                                     "when": "listFocus && !inputFocus" },
+
+{ "key": "ctrl+'",                 "command": "notebook.cell.edit",
+                                     "when": "notebookCellListFocused && notebookEditable && !inputFocus" },
+
+{ "key": "ctrl+'",                 "command": "notification.toggle",
+                                     "when": "notificationFocus" },
+
+{ "key": "ctrl+'",                 "command": "problems.action.open",
+                                     "when": "problemFocus" },
+
+{ "key": "ctrl+'",                 "command": "revealReference",
+                                     "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand" },
+
+{ "key": "ctrl+'",                 "command": "search.action.openResult",
+                                     "when": "fileMatchOrMatchFocus && searchViewletVisible" },
+
+{ "key": "ctrl+'",                 "command": "settings.action.focusSettingControl",
+                                     "when": "inSettingsEditor && settingRowFocus" },
+
+{ "key": "ctrl+'",                 "command": "settings.action.focusSettingsList",
+                                     "when": "inSettingsEditor && settingsTocRowFocus" },
+
+{ "key": "ctrl+'",                 "command": "workbench.action.terminal.findPrevious",
+                                     "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported" },
+
+{ "key": "ctrl+'",                 "command": "workbench.action.terminal.acceptSelectedSuggestion",
+                                     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible" },
+
+{ "key": "ctrl+'",                 "command": "explorer.openAndPassFocus",
+                                     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus" },
+
+{ "key": "ctrl+'",                 "command": "markdown.extension.onEnterKey",
+                                     "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^quarto$/" },
+
+{ "key": "ctrl+'",                 "command": "latex-workshop.onEnterKey",
+                                     "when": "acceptSuggestionOnEnter && config.latex-workshop.bind.enter.key && editorTextFocus && vim.active && !editorReadonly && !suggestWidgetVisible && vim.mode == 'Insert' && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
+
+{ "key": "ctrl+'",                 "command": "latex-workshop.onEnterKey",
+                                     "when": "config.latex-workshop.bind.enter.key && editorTextFocus && vim.active && !acceptSuggestionOnEnter && !editorReadonly && vim.mode == 'Insert' && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
+
+{ "key": "ctrl+'",                 "command": "latex-workshop.onEnterKey",
+                                     "when": "acceptSuggestionOnEnter && config.latex-workshop.bind.enter.key && editorTextFocus && !editorReadonly && !suggestWidgetVisible && !vim.active && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
+
+{ "key": "ctrl+'",                 "command": "latex-workshop.onEnterKey",
+                                     "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && !vim.active && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/" },
+
+{ "key": "ctrl+'",                 "command": "acceptSelectedCodeAction",
+                                     "when": "codeActionMenuVisible" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{ "key": "alt+j",              "command": "editor.action.moveLinesDownAction",
+"when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "alt+j",              "command": "editor.action.pageDownHover",
+                                     "when": "editorHoverFocused" },
+
+{ "key": "alt+j",              "command": "showNextParameterHint",
+                                     "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible" },
+
+{ "key": "alt+j",              "command": "history.showNext",
+                                     "when": "historyNavigationForwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible" },
+
+{ "key": "alt+j",              "command": "notebook.cell.moveDown",
+                                     "when": "notebookEditorFocused && !inputFocus" },
+
+{ "key": "alt+j",              "command": "scm.forceViewNextCommit",
+                                     "when": "scmRepository" },
+
+{ "key": "alt+j",              "command": "workbench.action.terminal.focusNextPane",
+                                     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported" },
+
+{ "key": "alt+j",              "command": "markdown.extension.onMoveLineDown",
+                                     "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/" },
+
+
+
+
+
+{ "key": "alt+k",                "command": "editor.action.moveLinesUpAction",
+                                     "when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "alt+k",                "command": "editor.action.pageUpHover",
+                                     "when": "editorHoverFocused" },
+
+{ "key": "alt+k",                "command": "showPrevParameterHint",
+                                     "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible" },
+
+{ "key": "alt+k",                "command": "history.showPrevious",
+                                     "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible" },
+
+{ "key": "alt+k",                "command": "notebook.cell.moveUp",
+                                     "when": "notebookEditorFocused && !inputFocus" },
+
+{ "key": "alt+k",                "command": "scm.forceViewPreviousCommit",
+                                     "when": "scmRepository" },
+
+{ "key": "alt+k",                "command": "workbench.action.terminal.focusPreviousPane",
+                                     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported" },
+
+{ "key": "alt+k",                "command": "markdown.extension.onMoveLineUp",
+                                     "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/" },
+
+
+
+
+
+{ "key": "alt+m",        "command": "editor.action.copyLinesDownAction",
+"when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "alt+m",        "command": "notebook.cell.copyDown",
+                                     "when": "notebookEditorFocused && !inputFocus" },
+
+{ "key": "alt+m",        "command": "markdown.extension.onCopyLineDown",
+                                     "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/" },
+
+
+
+{ "key": "alt+,",          "command": "editor.action.copyLinesUpAction",
+"when": "editorTextFocus && !editorReadonly" },
+
+{ "key": "alt+,",          "command": "notebook.cell.copyUp",
+                                     "when": "notebookEditorFocused && !inputFocus" },
+
+{ "key": "alt+,",          "command": "markdown.extension.onCopyLineUp",
+                                     "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/" },
+
+
+
 
 
 ]
  
+
