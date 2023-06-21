@@ -1162,6 +1162,26 @@
                                     "key": "ctrl+alt+i",
                                     "command": "-workbench.panel.chatSidebar.copilot"
                                 },
+                                {
+                                    "key": "ctrl+e",
+                                    "command": "editor.unfold",
+                                    "when": "editorTextFocus && foldingEnabled"
+                                },
+                                {
+                                    "key": "ctrl+shift+]",
+                                    "command": "-editor.unfold",
+                                    "when": "editorTextFocus && foldingEnabled"
+                                },
+                                {
+                                    "key": "ctrl+w",
+                                    "command": "editor.fold",
+                                    "when": "editorTextFocus && foldingEnabled"
+                                },
+                                {
+                                    "key": "ctrl+shift+[",
+                                    "command": "-editor.fold",
+                                    "when": "editorTextFocus && foldingEnabled"
+                                },
 
 
 ]
