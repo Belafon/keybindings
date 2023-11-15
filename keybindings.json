@@ -410,6 +410,7 @@
 
 { "key": "ctrl+;",             "command": "deleteLeft",
                                      "when": "textInputFocus" },
+                                     
 
 { "key": "ctrl+o",                   "command": "goToNextReference",
 "when": "inReferenceSearchEditor || referenceSearchVisible" },
@@ -489,8 +490,53 @@
                                      "when": "codeActionMenuVisible" },
 
 
-                                     { "key": "ctrl+k",                    "command": "cursorUp",
-                                     "when": "textInputFocus" },
+{ "key": "ctrl+j",                  "command": "inlineChat.arrowOutDown",
+                                     "when": "inlineChatFocused && inlineChatHasProvider && inlineChatInnerCursorLast && !accessibilityModeEnabled && !isEmbeddedDiffEditor" },
+
+{ "key": "ctrl+j",                  "command": "inlineChat.focus",
+                                    "when": "editorTextFocus && inlineChatVisible && !accessibilityModeEnabled && !inlineChatFocused && !isEmbeddedDiffEditor && inlineChatOuterCursorPosition == 'above'" },
+
+{ "key": "ctrl+j",                  "command": "iconSelectBox.focusDown",
+"when": "iconSelectBoxFocus" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{ "key": "ctrl+k",                    "command": "inlineChat.arrowOutUp",
+                                    "when": "inlineChatFocused && inlineChatHasProvider && inlineChatInnerCursorFirst && !accessibilityModeEnabled && !isEmbeddedDiffEditor" },
+
+{ "key": "ctrl+k",                    "command": "inlineChat.focus",
+                                    "when": "editorTextFocus && inlineChatVisible && !accessibilityModeEnabled && !inlineChatFocused && !isEmbeddedDiffEditor && inlineChatOuterCursorPosition == 'below'" },
+
+{ "key": "ctrl+k",                    "command": "iconSelectBox.focusUp",
+                                     "when": "iconSelectBoxFocus" },
+
+{ "key": "ctrl+k",                    "command": "cursorUp",
+"when": "textInputFocus" },
 
 { "key": "ctrl+k",                    "command": "interactiveEditor.arrowOutUp",
                                      "when": "interactiveEditorFocused && interactiveEditorHasProvider && interactiveEditorInnerCursorFirst" },
@@ -545,6 +591,56 @@
 
 { "key": "ctrl+k",                    "command": "selectPrevCodeAction",
                                      "when": "codeActionMenuVisible" },
+
+
+
+{ "key": "ctrl+j",
+                      "command": "workbench.action.quickOpenSelectNext",    "when": "inQuickOpen"},
+{ "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
+
+{ "key": "ctrl+'",
+    "command": "workbench.action.acceptSelectedQuickOpenItem", "when": "inQuickOpen" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1135,7 +1231,7 @@
                                     "command": "-workbench.action.showAllSymbols"
                                 },
                                 {
-                                    "key": "ctrl+t",
+                                    "key": "alt+;",
                                     "command": "workbench.action.closeActiveEditor"
                                 },
                                 {
@@ -1155,7 +1251,7 @@
                                     "when": "github.copilot.activated && github.copilot.panelVisible"
                                 },
                                 {
-                                    "key": "alt+'",
+                                    "key": "alt+\\",
                                     "command": "workbench.panel.chatSidebar.copilot"
                                 },
                                 {
@@ -1181,7 +1277,53 @@
                                     "key": "ctrl+shift+[",
                                     "command": "-editor.fold",
                                     "when": "editorTextFocus && foldingEnabled"
-                                }
+                                },
+                                {
+                                  "key": "shift+alt+q",
+                                  "command": "editor.action.addCommentLine",
+                                  "when": "editorTextFocus && !editorReadonly"
+                                },
+                                {
+                                  "key": "ctrl+k ctrl+c",
+                                  "command": "-editor.action.addCommentLine",
+                                  "when": "editorTextFocus && !editorReadonly"
+                                },
+                                {
+                                  "key": "alt+d",
+                                  "command": "editor.debug.action.toggleInlineBreakpoint",
+                                  "when": "editorTextFocus"
+                                },
+                                {
+                                  "key": "shift+f9",
+                                  "command": "-editor.debug.action.toggleInlineBreakpoint",
+                                  "when": "editorTextFocus"
+                                },
+                                {
+                                  "key": "alt+backspace",
+                                  "command": "extension.js-debug.removeCustomBreakpoint"
+                                },
+                                {
+                                  "key": "alt+f",
+                                  "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+                                },
+                                {
+                                  "key": "alt+'",
+                                  "command": "workbench.action.closeEditorsInGroup"
+                                },
+                                {
+                                  "key": "ctrl+k w",
+                                  "command": "-workbench.action.closeEditorsInGroup"
+                                },
+                                {
+                                  "key": "shift+alt+a",
+                                  "command": "workbench.action.addComment"
+                                },
+                                {
+                                  "key": "ctrl+k ctrl+alt+c",
+                                  "command": "-workbench.action.addComment"
+                                },
 
 
+
+{ "key": "ctrl+m",                "command": "-editor.action.toggleTabFocusMode" },
 ]
