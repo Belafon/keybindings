@@ -1,6 +1,7 @@
 
 ## Lineární příběh
 
+```plantuml
 @startuml
 skin rose
 
@@ -12,9 +13,11 @@ start
 :Vrátit se domů s pokladem;
 stop
 @enduml
+```
 
 ## Rozvětvený příběh
 
+```plantuml
 @startuml
 skin rose
 
@@ -33,3 +36,4 @@ else (Ne)
 endif
 stop
 @enduml
+```
