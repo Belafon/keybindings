@@ -124,7 +124,7 @@
     "command": "-workbench.action.replaceInFiles"
   },
   {
-    "key": "ctrl+u",
+    "key": "ctrl+t",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -699,13 +699,9 @@
 { "key": "ctrl+r",                 "command": "notebook.cell.edit",
                                      "when": "notebookCellListFocused && notebookEditable && !inputFocus" },
 
-{ "key": "ctrl+r",                 "command": "notification.toggle",
-                                     "when": "notificationFocus" },
-
-{ "key": "ctrl+r",                 "command": "problems.action.open",
-                                     "when": "problemFocus" },
-
-{ "key": "ctrl+r",                 "command": "revealReference",
+{
+  "key": "ctrl+r",
+  "command": "revealReference",
                                      "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand" },
 
 { "key": "ctrl+r",                 "command": "search.action.openResult",
@@ -819,13 +815,9 @@
 { "key": "ctrl+'",                 "command": "notebook.cell.edit",
                                      "when": "notebookCellListFocused && notebookEditable && !inputFocus" },
 
-{ "key": "ctrl+'",                 "command": "notification.toggle",
-                                     "when": "notificationFocus" },
-
-{ "key": "ctrl+'",                 "command": "problems.action.open",
-                                     "when": "problemFocus" },
-
-{ "key": "ctrl+'",                 "command": "revealReference",
+{
+  "key": "ctrl+'",
+  "command": "revealReference",
                                      "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand" },
 
 { "key": "ctrl+'",                 "command": "search.action.openResult",
@@ -1149,7 +1141,7 @@
     "when": "github.copilot.activated && github.copilot.panelVisible"
 },
 {
-    "key": "ctrl+t",
+    "key": "ctrl+shift+=",
     "command": "github.copilot.acceptCursorPanelSolution",
     "when": "github.copilot.activated && github.copilot.panelVisible"
 },
@@ -1325,5 +1317,129 @@
 
 
 
-{ "key": "ctrl+m",                "command": "-editor.action.toggleTabFocusMode" },
+{
+  "key": "ctrl+m",
+  "command": "-editor.action.toggleTabFocusMode"
+},
+{
+  "key": "-",
+  "command": "workbench.action.quickchat.toggle",
+  "when": "chatIsEnabled"
+},
+{
+  "key": "ctrl+shift+i",
+  "command": "-workbench.action.quickchat.toggle",
+  "when": "chatIsEnabled"
+},
+{
+  "key": "ctrl+shift+i",
+  "command": "editor.action.formatDocument",
+  "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+},
+{
+  "key": "shift+alt+f",
+  "command": "-editor.action.formatDocument",
+  "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+},
+{
+  "key": "ctrl+alt+c",
+  "command": "copyFilePath",
+  "when": "!editorFocus"
+},
+{
+  "key": "shift+alt+c",
+  "command": "-copyFilePath",
+  "when": "!editorFocus"
+},
+{
+  "key": "ctrl+alt+c",
+  "command": "copyFilePath",
+  "when": "editorFocus"
+},
+{
+  "key": "shift+alt+c",
+  "command": "-copyFilePath",
+  "when": "editorFocus"
+},
+{
+  "key": "ctrl+alt+c",
+  "command": "search.action.copyPath",
+  "when": "fileMatchOrFolderMatchWithResourceFocus"
+},
+{
+  "key": "shift+alt+c",
+  "command": "-search.action.copyPath",
+  "when": "fileMatchOrFolderMatchWithResourceFocus"
+},
+{
+  "key": "ctrl+; ctrl+backspace",
+  "command": "notebook.addFindMatchToSelection",
+  "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+},
+{
+  "key": "ctrl+d",
+  "command": "-notebook.addFindMatchToSelection",
+  "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+},
+{
+  "key": "ctrl+d",
+  "command": "-editor.action.addSelectionToNextFindMatch",
+  "when": "editorFocus"
+},
+{
+  "key": "ctrl+enter",
+  "command": "-markdown.extension.onCtrlEnterKey",
+  "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/ || editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && config.editor.acceptSuggestionOnEnter == 'off' && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+},
+{
+  "key": "f4",
+  "command": "workbench.action.debug.stop",
+  "when": "inDebugMode && !focusedSessionIsAttach"
+},
+{
+  "key": "shift+f5",
+  "command": "-workbench.action.debug.stop",
+  "when": "inDebugMode && !focusedSessionIsAttach"
+},
+{
+  "key": "ctrl+f1",
+  "command": "textmarker.toggleHighlight"
+},
+{
+  "key": "ctrl+shift+f1",
+  "command": "textmarker.clearAllHighlight"
+},
+{
+  "key": "ctrl+f2",
+  "command": "git-graph.view"
+},
+{
+  "key": "ctrl+5",
+  "command": "workbench.output.action.toggleAutoScroll",
+  "when": "view == 'workbench.panel.output'"
+},
+{
+  "key": "ctrl+shift+g",
+  "command": "-workbench.view.scm",
+  "when": "workbench.scm.active"
+},
+{
+  "key": "ctrl+shift+g",
+  "command": "-workbench.action.terminal.openDetectedLink",
+  "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
+},
+{
+  "key": "ctrl+shift+b",
+  "command": "git.stageAll"
+},
+{
+  "key": "ctrl+shift+g",
+  "command": "workbench.view.scm"
+},
+{
+  "key": "ctrl+shift+b",
+  "command": "-workbench.action.tasks.build",
+  "when": "taskCommandsRegistered"
+}
 ]
+
